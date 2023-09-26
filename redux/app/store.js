@@ -10,7 +10,7 @@ const store = configureStore({
 		users: usersReducer,
 	},
 	middleware: (defaultMiddleware) => {
-		defaultMiddleware().concat(logger);
+		return defaultMiddleware().concat(logger);
 	},
 });
 
