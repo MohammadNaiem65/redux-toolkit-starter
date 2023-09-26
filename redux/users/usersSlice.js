@@ -1,4 +1,5 @@
 const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit');
+const { default: fetch } = require('node-fetch');
 
 // initial state
 const initialState = {
@@ -41,6 +42,6 @@ const usersSlice = createSlice({
 });
 
 module.exports = {
-	default: usersSlice,
+	default: usersSlice.reducer,
 	fetchUsers: fetchUsers,
 };
